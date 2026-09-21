@@ -1,7 +1,7 @@
-<p align="center"> # TaskCollab </p>
+<p align="center"> <img src="https://img.shields.io/badge/TaskCollab-Project%20Management-111827?style=for-the-badge" alt="TaskCollab"> </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/TaskCollab-Project%20Management-111827?style=for-the-badge" alt="TaskCollab">
+  
   <img src="https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=white" alt="React">
   <img src="https://img.shields.io/badge/Node.js-20-339933?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js">
   <img src="https://img.shields.io/badge/Express.js-Backend-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express">
@@ -10,12 +10,6 @@
 
 <p align="center">
   A modern collaborative workspace for teams to plan, organize, and complete work.
-</p>
-
-<p align="center">
-  <a href="https://github.com/KevinJoeS/TaskCollabrationPlatform">
-    <img src="https://img.shields.io/badge/View%20Repository-18181B?style=for-the-badge&logo=github" alt="GitHub">
-  </a>
 </p>
 
 ---
