@@ -42,23 +42,6 @@ Complete
 
 The application combines a responsive React frontend with a Node.js/Express backend and MongoDB database.
 
----
-
-## Product Preview
-
-<p align="center">
-  <!-- Replace this with your actual project GIF -->
-  <img src="./docs/taskcollab-demo.gif" width="900" alt="TaskCollab Demo">
-</p>
-
-<p align="center">
-  <i>TaskCollab workspace preview</i>
-</p>
-
-> Don't have a GIF yet? Replace the image above with screenshots from your application.
-
----
-
 ## Features
 
 ### Authentication
