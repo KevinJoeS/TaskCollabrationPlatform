@@ -1,0 +1,124 @@
+/* TaskCollab design tokens.
+   Two themes designed separately: warm paper + charcoal ink (light), charcoal + graphite (dark).
+   Cobalt is the only brand accent. Amber is reserved for urgency. */
+:root {
+  --font-display: 'Bricolage Grotesque Variable', 'Hanken Grotesk Variable', system-ui, sans-serif;
+  --font-ui: 'Hanken Grotesk Variable', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --fs-11: 0.6875rem;
+  --fs-12: 0.75rem;
+  --fs-13: 0.8125rem;
+  --fs-14: 0.875rem;
+  --fs-15: 0.9375rem;
+  --fs-17: 1.0625rem;
+  --fs-20: 1.25rem;
+  --fs-26: 1.625rem;
+  --fs-34: 2.125rem;
+
+  --r-xs: 3px;
+  --r-sm: 5px;
+  --r: 7px;
+  --r-lg: 10px;
+
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 20px;
+  --s-6: 24px;
+  --s-8: 32px;
+  --s-10: 40px;
+  --s-12: 48px;
+  --s-16: 64px;
+
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --t-fast: 120ms;
+  --t: 180ms;
+  --t-slow: 260ms;
+
+  --sidebar-w: 248px;
+  --sidebar-w-collapsed: 64px;
+  --topbar-h: 56px;
+
+  /* The sidebar is charcoal in both themes; it is the product's constant. */
+  --side-bg: #1c1e22;
+  --side-border: #2d3036;
+  --side-text: #c6c8cd;
+  --side-text-dim: #868b94;
+  --side-hover: #26292e;
+  --side-active: #2f3339;
+  --side-active-text: #f3f2ee;
+}
+
+:root,
+:root[data-theme='light'] {
+  color-scheme: light;
+  --bg: #f3f2ee;
+  --surface: #fbfaf8;
+  --surface-2: #eeece7;
+  --sunken: #e9e7e1;
+  --border: #dedbd3;
+  --border-strong: #c6c2b8;
+  --text: #1a1c1f;
+  --text-2: #474c54;
+  --text-3: #6a7079;
+  --accent: #2346c7;
+  --accent-hover: #1b389f;
+  --accent-text: #2346c7;
+  --accent-soft: #e3e8f8;
+  --on-accent: #ffffff;
+  --ink-btn: #1c1e22;
+  --ink-btn-hover: #2f3339;
+  --on-ink-btn: #f3f2ee;
+  --amber: #96610b;
+  --amber-mark: #c98a1b;
+  --amber-soft: #f5ead2;
+  --danger: #a93226;
+  --danger-soft: #f6e3e0;
+  --steel: #566480;
+  --track: #e2dfd8;
+  --skeleton-a: #e8e5df;
+  --skeleton-b: #f4f2ed;
+  --scrim: rgba(24, 26, 30, 0.42);
+  --shadow-pop: 0 18px 40px -12px rgba(24, 26, 30, 0.22), 0 2px 8px rgba(24, 26, 30, 0.06);
+  --shadow-raise: 0 1px 2px rgba(24, 26, 30, 0.06);
+  --focus: #2346c7;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --bg: #141518;
+  --surface: #1b1d21;
+  --surface-2: #23262b;
+  --sunken: #0f1012;
+  --border: #2b2e34;
+  --border-strong: #3c4048;
+  --text: #eceae6;
+  --text-2: #b4b7bd;
+  --text-3: #8b9099;
+  --accent: #3d5be0;
+  --accent-hover: #4e6bea;
+  --accent-text: #8ea3ff;
+  --accent-soft: #1d2645;
+  --on-accent: #ffffff;
+  --ink-btn: #eceae6;
+  --ink-btn-hover: #ffffff;
+  --on-ink-btn: #17181b;
+  --amber: #e2ab4d;
+  --amber-mark: #e2ab4d;
+  --amber-soft: #33290f;
+  --danger: #f08c81;
+  --danger-soft: #3a1e1b;
+  --steel: #93a0ba;
+  --track: #2b2e34;
+  --skeleton-a: #202327;
+  --skeleton-b: #2a2d33;
+  --scrim: rgba(0, 0, 0, 0.6);
+  --shadow-pop: 0 18px 44px -12px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.04);
+  --shadow-raise: none;
+  --focus: #8ea3ff;
+  --side-bg: #0f1012;
+  --side-border: #23262b;
+  --side-hover: #1b1d21;
+  --side-active: #23262b;
+}
