@@ -1,4 +1,4 @@
-# TaskCollab
+<p align="center"> # TaskCollab </p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/TaskCollab-Project%20Management-111827?style=for-the-badge" alt="TaskCollab">
