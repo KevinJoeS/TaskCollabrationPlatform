@@ -1,92 +1,576 @@
-# TaskCollab
+<p align="center"> <img src="https://img.shields.io/badge/TaskCollab-Project%20Management-111827?style=for-the-badge" alt="TaskCollab"> </p>
 
-A collaborative workspace for team projects and tasks, built with React, Express, Node.js and MongoDB.
+<p align="center">
+  
+  <img src="https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=white" alt="React">
+  <img src="https://img.shields.io/badge/Node.js-20-339933?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js">
+  <img src="https://img.shields.io/badge/Express.js-Backend-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express">
+  <img src="https://img.shields.io/badge/MongoDB-Database-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB">
+</p>
+
+<p align="center">
+  A modern collaborative workspace for teams to plan, organize, and complete work.
+</p>
+
+---
+
+## About
+
+TaskCollab is a full-stack collaborative project and task management platform designed to bring projects, tasks, team members, communication, and progress tracking into one focused workspace.
+
+Instead of jumping between different productivity tools, teams can use TaskCollab to:
+
+```text
+Plan
+  ↓
+Organize
+  ↓
+Assign
+  ↓
+Collaborate
+  ↓
+Track
+  ↓
+Complete
+```
+
+The application combines a responsive React frontend with a Node.js/Express backend and MongoDB database.
 
 ## Features
 
-- JWT authentication with bcrypt password hashing, "remember me", and change password
-- Projects with members (invite by email when creating a project, or later in project settings)
-- Project page with four views: Overview, Board, List and Activity
-- Five-stage Kanban board (Backlog, To do, In progress, In review, Completed) with drag and drop, plus a "Move to" menu on every card for touch and keyboard
-- Sortable, filterable, searchable task list that turns into cards on phones
-- Task side panel (linkable with `?task=<id>`): edit title, description, status, priority, assignee and due date, and hold a conversation in comments
-- Dashboard with a workload overview, a 14-day due-date strip, My work, upcoming deadlines, project progress and recent activity
-- Team page with roles, workload and a profile summary for each person
-- Activity feed and a notification centre (assignments, comments, approaching deadlines, project milestones) with read / unread state
-- Global search and command palette (`Ctrl K` / `⌘ K`)
-- Light and dark themes (saved per browser), collapsible sidebar, responsive layouts, skeleton loaders, empty and error states, toasts
+### Authentication
 
-## Run locally
+- Secure JWT authentication
+- bcrypt password hashing
+- Remember-me functionality
+- Protected routes
+- Profile management
+- Change password
 
-1. Install Node.js 18+ and MongoDB (local MongoDB or Atlas).
-2. Copy `server/.env.example` to `server/.env` and set `MONGO_URI` and `JWT_SECRET` (at least 16 characters).
-3. From the root: `npm install` (installs `concurrently`).
-4. Run `npm run install-all`.
-5. Run `npm run dev`.
-6. Open `http://localhost:5173`.
+### Projects
 
-The API runs on `http://localhost:5000`.
+- Create projects
+- Invite members by email
+- Manage project members
+- Project settings
+- Project progress tracking
+- Project activity
 
-## Environment
+### Task Management
 
-Server (`server/.env`):
+- Create and edit tasks
+- Assign tasks to team members
+- Set priorities
+- Set deadlines
+- Update task status
+- Task descriptions
+- Task comments
+- Task detail side panel
+- Shareable task URLs
 
-| Variable | Purpose |
-| --- | --- |
-| `MONGO_URI` | MongoDB connection string |
-| `JWT_SECRET` | Long random string used to sign tokens (16+ characters) |
-| `PORT` | API port, default `5000` |
-| `CLIENT_URL` | Allowed front-end origin(s) for CORS, comma-separated. Default `http://localhost:5173` |
+### Kanban Board
 
-Client (`client/.env`, optional, see `client/.env.example`):
+TaskCollab provides a five-stage workflow:
 
-| Variable | Purpose |
-| --- | --- |
-| `VITE_API_URL` | API base URL, default `http://localhost:5000/api` |
+```text
+┌──────────┐
+│ BACKLOG  │
+└────┬─────┘
+     ↓
+┌──────────┐
+│  TO DO   │
+└────┬─────┘
+     ↓
+┌─────────────┐
+│ IN PROGRESS │
+└──────┬──────┘
+       ↓
+┌─────────────┐
+│  IN REVIEW  │
+└──────┬──────┘
+       ↓
+┌────────────┐
+│ COMPLETED  │
+└────────────┘
+```
 
-Never commit `.env` files. They are already listed in `.gitignore`.
+Includes:
+
+- Drag and drop
+- Task priority
+- Assignee information
+- Due dates
+- Touch-friendly "Move to" controls
+- Keyboard-friendly controls
+
+---
+
+## Dashboard
+
+The dashboard acts as the team's command center.
+
+### Includes
+
+- Workload overview
+- My Work
+- Upcoming deadlines
+- 14-day deadline timeline
+- Project progress
+- Recent activity
+- Task statistics
+
+---
+
+## Collaboration
+
+TaskCollab isn't only about managing tasks.
+
+Teams can collaborate directly around their work.
+
+### Activity
+
+Track events such as:
+
+- Task creation
+- Task assignment
+- Status changes
+- Comments
+- Project milestones
+
+### Notifications
+
+Receive notifications for:
+
+- New assignments
+- Comments
+- Approaching deadlines
+- Project updates
+- Milestones
+
+Notifications support read/unread states.
+
+---
+
+## Search
+
+TaskCollab includes global workspace search.
+
+Search across:
+
+- Projects
+- Tasks
+- Team members
+
+### Command Palette
+
+Quickly access application actions using:
+
+```text
+Ctrl + K
+```
+
+or:
+
+```text
+Cmd + K
+```
+
+---
+
+## UI / UX
+
+TaskCollab is designed as a focused productivity workspace rather than a generic admin dashboard.
+
+### Interface includes
+
+- Light mode
+- Dark mode
+- Responsive layouts
+- Collapsible sidebar
+- Mobile-friendly task views
+- Skeleton loaders
+- Empty states
+- Error states
+- Toast notifications
+- Hover interactions
+- Keyboard interactions
+- Responsive Kanban board
+
+---
+
+## Design Philosophy
+
+The interface follows a simple principle:
+
+> **Complex project information should feel simple to navigate.**
+
+The design focuses on:
+
+```text
+Clear hierarchy
+       +
+Consistent spacing
+       +
+Focused interactions
+       +
+Useful feedback
+       =
+Better productivity
+```
+
+---
+
+## Tech Stack
+
+<p align="center">
+
+<img src="https://skillicons.dev/icons?i=react,vite,js,nodejs,express,mongodb,git,github" alt="Tech Stack">
+
+</p>
+
+### Frontend
+
+- React
+- Vite
+- JavaScript
+- React Router
+- Axios
+- CSS
+
+### Backend
+
+- Node.js
+- Express.js
+- REST API
+- JWT
+- bcrypt
+
+### Database
+
+- MongoDB
+- Mongoose
+
+### Tools
+
+- Git
+- GitHub
+- npm
+- Concurrently
+
+---
+
+## Architecture
+
+```text
+                    TASKCOLLAB
+                        │
+              ┌─────────┴─────────┐
+              │                   │
+           FRONTEND             BACKEND
+           React              Node.js
+            Vite              Express
+              │                   │
+              │    REST API       │
+              └─────────┬─────────┘
+                        │
+                        ▼
+                   MongoDB Atlas
+```
+
+---
+
+## Project Structure
+
+```text
+TaskCollab/
+│
+├── client/
+│   ├── public/
+│   │
+│   └── src/
+│       ├── components/
+│       │   ├── ui/
+│       │   ├── Board.jsx
+│       │   ├── TaskCard.jsx
+│       │   ├── TaskPanel.jsx
+│       │   ├── TaskTable.jsx
+│       │   ├── Sidebar.jsx
+│       │   ├── Topbar.jsx
+│       │   ├── CommandPalette.jsx
+│       │   └── ...
+│       │
+│       ├── context/
+│       ├── hooks/
+│       ├── layouts/
+│       ├── pages/
+│       ├── services/
+│       ├── styles/
+│       └── main.jsx
+│
+├── server/
+│   ├── config/
+│   ├── controllers/
+│   ├── middleware/
+│   ├── models/
+│   ├── routes/
+│   ├── utils/
+│   ├── app.js
+│   └── server.js
+│
+├── .gitignore
+├── package.json
+└── README.md
+```
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+Make sure you have:
+
+- Node.js 18+
+- npm
+- MongoDB or MongoDB Atlas
+- Git
+
+### Clone
+
+```bash
+git clone https://github.com/KevinJoeS/TaskCollabrationPlatform.git
+```
+
+```bash
+cd TaskCollabrationPlatform
+```
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+Then:
+
+```bash
+npm run install-all
+```
+
+### Environment Variables
+
+Create:
+
+```text
+server/.env
+```
+
+Use:
+
+```env
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_long_random_secret
+PORT=5000
+CLIENT_URL=http://localhost:5173
+```
+
+For the frontend:
+
+```text
+client/.env
+```
+
+Use:
+
+```env
+VITE_API_URL=http://localhost:5000/api
+```
+
+Never commit `.env` files.
+
+### Run
+
+```bash
+npm run dev
+```
+
+Open:
+
+```text
+http://localhost:5173
+```
+
+---
 
 ## API
 
-All routes except register and login need `Authorization: Bearer <token>`. Errors always look like `{ "message": "..." }`.
+### Authentication
 
-| Area | Routes |
-| --- | --- |
-| Auth | `POST /api/auth/register`, `POST /api/auth/login`, `GET /api/auth/me`, `PUT /api/auth/profile`, `PUT /api/auth/password` |
-| Projects | `GET /api/projects`, `POST /api/projects` (accepts `memberEmails`), `GET /api/projects/:id`, `PUT /api/projects/:id`, `DELETE /api/projects/:id`, `POST /api/projects/:id/members`, `DELETE /api/projects/:id/members/:userId` |
-| Tasks | `GET /api/tasks` (`?project`, `?status`, `?priority`, `?assignedTo`, `?mine=true`), `POST /api/tasks`, `GET /api/tasks/:id`, `PUT /api/tasks/:id`, `DELETE /api/tasks/:id` |
-| Comments | `GET /api/comments/task/:taskId`, `POST /api/comments/task/:taskId`, `DELETE /api/comments/:id` |
-| Activity | `GET /api/activity` (`?project`, `?limit`, `?before`) |
-| Notifications | `GET /api/notifications`, `PATCH /api/notifications/:id/read`, `POST /api/notifications/read-all` |
-| Search | `GET /api/search?q=` |
-
-Every project, task, comment, activity and search request is checked against project membership on the server.
-
-### Task status values
-
-`backlog`, `todo`, `in-progress`, `in-review`, `done`. The value `done` is shown as "Completed" in the interface. It was kept so tasks created before the five-column board keep working without a data migration.
-
-## Project structure
-
-```
-server/
-  app.js, server.js        Express app and startup checks
-  config/ middleware/      database connection, JWT auth
-  models/                  User, Project, Task, Comment, Activity, Notification
-  controllers/ routes/     one pair per API area
-  utils/                   errors + async wrapper, membership checks, activity and notification helpers
-client/src/
-  components/ui/           Button, Input, Select, Modal, Avatar, Badge, Skeleton, Popover, states
-  components/              Sidebar, Topbar, Navbar, Board, TaskCard, TaskTable, TaskPanel, CommandPalette, ...
-  layouts/                 PublicLayout, AuthLayout, DashboardLayout
-  pages/                   Landing, Login, Register, Dashboard, Projects, ProjectDetails, MyTasks, Team, Activity, Settings, NotFound
-  services/                axios instance and one service per API area
-  hooks/ context/ lib/     data hooks, auth / theme / toast providers, small request cache
-  styles/                  design tokens (light + dark), base, UI, shell, workspace, public
+```http
+POST /api/auth/register
+POST /api/auth/login
+GET  /api/auth/me
+PUT  /api/auth/profile
+PUT  /api/auth/password
 ```
 
-## Notes
+### Projects
 
-- "Forgot password?" on the login page explains that email reset is not set up. Adding it needs an email service.
-- The profile picture is an optional `https://` image link. There is no file upload.
-- Drag and drop uses the browser's native API, which works with a mouse. On touch screens use the "Move to" menu on the card, or the status field in the task panel.
+```http
+GET    /api/projects
+POST   /api/projects
+GET    /api/projects/:id
+PUT    /api/projects/:id
+DELETE /api/projects/:id
+
+POST   /api/projects/:id/members
+DELETE /api/projects/:id/members/:userId
+```
+
+### Tasks
+
+```http
+GET    /api/tasks
+POST   /api/tasks
+GET    /api/tasks/:id
+PUT    /api/tasks/:id
+DELETE /api/tasks/:id
+```
+
+### Comments
+
+```http
+GET    /api/comments/task/:taskId
+POST   /api/comments/task/:taskId
+DELETE /api/comments/:id
+```
+
+### Activity
+
+```http
+GET /api/activity
+```
+
+### Notifications
+
+```http
+GET   /api/notifications
+PATCH /api/notifications/:id/read
+POST  /api/notifications/read-all
+```
+
+### Search
+
+```http
+GET /api/search?q=<query>
+```
+
+---
+
+## Task Workflow
+
+| Internal Value | UI |
+|---|---|
+| `backlog` | Backlog |
+| `todo` | To Do |
+| `in-progress` | In Progress |
+| `in-review` | In Review |
+| `done` | Completed |
+
+---
+
+## Security
+
+TaskCollab implements:
+
+- JWT authentication
+- bcrypt password hashing
+- Protected routes
+- Project membership authorization
+- Server-side access validation
+- Environment-based secrets
+- `.env` exclusion through `.gitignore`
+
+---
+
+## Responsive Design
+
+TaskCollab is designed for:
+
+```text
+Desktop
+   ↓
+Laptop
+   ↓
+Tablet
+   ↓
+Mobile
+```
+
+The interface adapts rather than simply shrinking the desktop layout.
+
+---
+
+## Future Roadmap
+
+The project can be extended with:
+
+- Real-time collaboration
+- WebSocket updates
+- Email invitations
+- Password reset
+- File attachments
+- Calendar integration
+- Task dependencies
+- Recurring tasks
+- Team mentions
+- Rich-text comments
+- Advanced analytics
+- Role-based permissions
+
+---
+
+## Known Limitations
+
+- Password reset email functionality is not currently implemented.
+- Profile pictures use HTTPS image URLs instead of file uploads.
+- Kanban drag-and-drop uses the browser's native drag-and-drop API.
+- Touch devices can use the "Move to" action.
+
+---
+
+## Author
+
+<p align="center">
+
+### Kevin Joe S
+
+B.Tech Artificial Intelligence and Machine Learning
+
+Rajalakshmi Engineering College, Chennai
+
+</p>
+
+<p align="center">
+
+<a href="https://github.com/KevinJoeS">
+<img src="https://img.shields.io/badge/GitHub-KevinJoeS-18181B?style=for-the-badge&logo=github" alt="GitHub">
+</a>
+
+<a href="https://www.linkedin.com/in/kevinjoes/">
+<img src="https://img.shields.io/badge/LinkedIn-Kevin%20Joe-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+</a>
+
+</p>
+
+---
+
+<p align="center">
+  <strong>TaskCollab</strong>
+  <br>
+  Plan. Collaborate. Execute.
+</p>
+
+<p align="center">
+  Built with React, Node.js, Express and MongoDB.
+</p>
